@@ -1,5 +1,6 @@
 import { type CognitoUser } from "@aws-amplify/auth";
 import { Amplify, Auth } from "aws-amplify";
+// connect our AWS backend to the frontend
 import { AuthStack } from '../../../space-finder/outputs.json';
 
 const awsRegion = 'us-east-2';
