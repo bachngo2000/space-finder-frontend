@@ -23,7 +23,7 @@ Amplify.configure({
 export class AuthService {
 
     private user: CognitoUser | undefined;
-    private jwtToken: string | undefined;
+    public jwtToken: string | undefined;
     private temporaryCredentials: object | undefined;
 
     // If login is successful, the method returns an object containing the credentials that can later be used inside the application or undefined if login fails
