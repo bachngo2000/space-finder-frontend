@@ -30,7 +30,7 @@ export default function LoginComponent({ authService, setUserNameCb }: LoginProp
       if (loginResponse) {
         setLoginSuccess(true);
       } else {
-        setErrorMessage("invalid credentials");
+        setErrorMessage("Invalid Credentials");
       }
     } else {
       setErrorMessage("UserName and password required!");
@@ -48,7 +48,7 @@ export default function LoginComponent({ authService, setUserNameCb }: LoginProp
       {loginSuccess && <Navigate to="/profile" replace={true} />}
       <h2>Please login</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <label>User name</label>
+        <label>Username</label>
         <input
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
