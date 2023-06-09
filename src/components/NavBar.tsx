@@ -26,7 +26,7 @@ export default function NavBar({ userName }: NavBarProps) {
       <NavLink to={"/"}>Home</NavLink>
       <NavLink to={"/profile"}>Profile</NavLink>
       <NavLink to={"/spaces"}>Spaces</NavLink>
-      <NavLink to={"/createSpace"}>Create space</NavLink>
+      <NavLink to={"/createSpace"}>Create Space</NavLink>
       {renderLoginLogout()}
     </div>
   );

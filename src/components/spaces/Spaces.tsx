@@ -30,7 +30,7 @@ export default function Spaces(props: SpacesProps){
 
     function renderSpaces(){
         if(!props.dataService.isAuthorized()) {
-            return<NavLink to={"/login"}>Please login</NavLink>
+            return<NavLink to={"/login"}>Please login to view your spaces</NavLink>
         }
         const rows: any[] = [];
         if(spaces) {

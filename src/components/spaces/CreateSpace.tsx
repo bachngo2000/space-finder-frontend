@@ -22,11 +22,11 @@ export default function CreateSpace({ dataService }: CreateSpaceProps) {
     event.preventDefault();
     if (name && location) {
       const id = await dataService.createSpace(name, location, photo)
-      setActionResult(`Created space with id ${id}`);
+      setActionResult(`Created Space with id ${id}`);
       setName('');
       setLocation('');
     } else {
-      setActionResult('Please provide a name and a location!')
+      setActionResult('Please provide a name and a location for your photo!')
     }
 
 
@@ -49,7 +49,7 @@ export default function CreateSpace({ dataService }: CreateSpaceProps) {
   //check if user is authorized
   function renderForm(){
     if (!dataService.isAuthorized()) {
-      return<NavLink to={"/login"}>Please login</NavLink>
+      return<NavLink to={"/login"}>Please login to view your spaces</NavLink>
     }
     return (
       <form onSubmit={(e) => handleSubmit(e)}>
@@ -60,7 +60,7 @@ export default function CreateSpace({ dataService }: CreateSpaceProps) {
         <label>Photo:</label><br/>
         <input type="file" onChange={(e) => setPhotoUrl(e)} /><br/>
         {renderPhoto()}<br/>
-        <input type="submit" value='Create space'/>
+        <input type="submit" value='Create Space'/>
       </form>
     );
   }

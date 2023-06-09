@@ -17,7 +17,7 @@ export class DataService {
     }
 
     public reserveSpace(spaceId: string) {
-        return '123';
+        return spaceId + '123';
     }
 
     public async getSpaces():Promise<SpaceEntry[]>{

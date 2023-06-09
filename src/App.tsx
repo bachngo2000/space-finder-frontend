@@ -26,7 +26,7 @@ function App() {
       children:[
         {
           path: "/",
-          element: <div>Hello world!</div>,
+          element: <div>Welcome to Space Finder!</div>,
         },
         {
           path: "/login",
@@ -34,7 +34,10 @@ function App() {
         },
         {
           path: "/profile",
-          element: <div>Profile page</div>,
+          element: <div>
+                    Welcome to the Profile page!
+                      <h2>Please navigate to the Spaces tab to view your spaces</h2>
+                  </div>,
         },
         {
           path: "/createSpace",
